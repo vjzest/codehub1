@@ -3,11 +3,11 @@ const nodemailer = require("nodemailer");
 async function mailSender(to, subject, html) {
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
-    port: 465,
-    secure: true, // Use SSL
+    port: 587, // or 465 for secure connections
+    secure: false, // true for 465, false for other ports
     auth: {
       user: "vjzest9569@gmail.com",
-      pass: "awgxmcjlonuvriyk", // Use an App Password
+      pass: "awgxmcjlonuvriyk",
     },
     tls: {
       rejectUnauthorized: false, // Allow self-signed certificates
@@ -23,7 +23,6 @@ async function mailSender(to, subject, html) {
 
   try {
     const info = await transporter.sendMail(mailOptions);
-    console.log("Email sent:", info.response);
     return info;
   } catch (error) {
     console.error("Error sending email:", error);
