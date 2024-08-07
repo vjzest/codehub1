@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://codehub1-c3vs-git-main-vijay-mauryas-projects.vercel.app/",
+    origin: "https://codehub1-c3vs-git-main-vijay-mauryas-projects.vercel.app", // Removed trailing slash
     credentials: true,
   })
 );
@@ -44,8 +44,7 @@ app.use("/api/v1/course", courseRoutes);
 app.use("/api/v1/payment", paymentRoutes);
 app.use("/api/v1/reach", contactUsRoute);
 
-//def route
-
+//default route
 app.get("/", (req, res) => {
   return res.json({
     success: true,
