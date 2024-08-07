@@ -3,8 +3,8 @@ const nodemailer = require("nodemailer");
 async function mailSender(to, subject, html) {
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
-    port: 465, // Try 465 for SSL
-    secure: true, // Set to true for port 465
+    port: 465,
+    secure: true, // Use SSL
     auth: {
       user: "vjzest9569@gmail.com",
       pass: "awgxmcjlonuvriyk", // Use an App Password
