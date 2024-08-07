@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://codehub1-c3vs-git-main-vijay-mauryas-projects.vercel.app/",
     credentials: true,
   })
 );
