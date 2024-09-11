@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://codehub1-c3vs-git-main-vijay-mauryas-projects.vercel.app/", // Removed trailing slash
+    origin: "*", // Removed trailing slash
     credentials: true,
   })
 );
